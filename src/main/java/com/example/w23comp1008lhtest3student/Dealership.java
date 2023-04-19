@@ -107,7 +107,13 @@ public class Dealership {
 
     public ArrayList<Car> search(String searchText)
     {
-        return null;
+        ArrayList<Car> search = new ArrayList<Car>();
+        for(Car each : inventory){
+            if(each.contains(searchText, inventory) == true){
+                search.add(each);
+            }
+        }
+        return search;
     }
 
 
