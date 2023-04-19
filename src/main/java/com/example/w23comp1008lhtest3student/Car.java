@@ -95,9 +95,10 @@ public class Car {
         return valid;
     }
 
-    public String toString()
+    public String toString(Car car)
     {
-        return null;
+        String ad = car.year + " " + car.make + " " + car.model + " $" + car.price;
+        return ad;
     }
 
 }
