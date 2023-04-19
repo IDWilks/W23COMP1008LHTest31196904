@@ -1,5 +1,6 @@
 package com.example.w23comp1008lhtest3student;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -78,9 +79,20 @@ public class Car {
 
     }
 
-    public boolean contains(String searchText)
-    {
-        return false;
+    public boolean contains(String searchText, ArrayList<Car> inventory) {
+        String test = searchText.toLowerCase();
+        boolean valid = false;
+        for (Car each : inventory) {
+            String validMake = each.make;
+            String validModel = each.model;
+            if (validMake.toLowerCase().contains(test)) {
+                valid = true;
+            }
+            if (validModel.toLowerCase().contains(test)) {
+                valid = true;
+            }
+        }
+        return valid;
     }
 
     public String toString()
