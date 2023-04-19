@@ -67,7 +67,16 @@ public class Dealership {
     }
     public Car getMostExpensiveCar()
     {
-        return null;
+        Car mostExpensiveCar = null;
+        if (inventory != null && !inventory.isEmpty()) {
+            mostExpensiveCar = inventory.get(0);
+            for (Car car : inventory) {
+                if (car.getPrice() > mostExpensiveCar.getPrice()) {
+                    mostExpensiveCar = car;
+                }
+            }
+        }
+        return mostExpensiveCar;
     }
 
     public ArrayList<Car> getElectricVehicles()
