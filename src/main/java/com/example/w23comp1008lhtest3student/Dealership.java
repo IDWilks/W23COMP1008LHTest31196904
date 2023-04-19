@@ -92,7 +92,11 @@ public class Dealership {
 
     public int getNumCarsInInventory()
     {
-        return -1;
+        int numCars = 0;
+        for(Car car : inventory){
+            numCars += 1;
+        }
+        return numCars;
     }
 
     public String toString()
