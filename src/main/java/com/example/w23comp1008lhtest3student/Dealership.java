@@ -8,22 +8,33 @@ public class Dealership {
 
     public Dealership(String dealershipName)
     {
+        setDealershipName(dealershipName);
+        inventory = new ArrayList<Car>();
+
     }
 
     public String getDealershipName() {
         return dealershipName;
     }
 
-    public void setDealershipName(String dealershipName) {
-
+    public void setDealershipName(String dealershipName) throws IllegalArgumentException{
+        String check = dealershipName.trim();
+        if(check.length() >= 3){
+            this.dealershipName = dealershipName;
+        }
+        else{
+            throw new IllegalArgumentException("Please enter a valid name (longer then 2 characters");
+        }
     }
 
     public void addCar(Car car)
     {
+        inventory.add(car);
     }
 
     public void addCarCollection(ArrayList<Car> cars)
     {
+        inventory.addAll(cars);
     }
 
 
