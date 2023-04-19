@@ -101,7 +101,8 @@ public class Dealership {
 
     public String toString()
     {
-        return null;
+        String eval = "The Inventory has " + getNumCarsInInventory() + " cars worth $" + getInventoryValue();
+        return eval;
     }
 
     public ArrayList<Car> search(String searchText)
