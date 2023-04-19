@@ -95,7 +95,7 @@ public class Car {
         return valid;
     }
 
-    public String toString(Car car)
+    public static String toString(Car car)
     {
         String ad = car.year + " " + car.make + " " + car.model + " $" + car.price;
         return ad;

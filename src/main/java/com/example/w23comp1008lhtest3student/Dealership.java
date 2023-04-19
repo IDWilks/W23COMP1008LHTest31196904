@@ -3,7 +3,7 @@ package com.example.w23comp1008lhtest3student;
 import java.util.ArrayList;
 
 public class Dealership {
-    private ArrayList<Car> inventory;
+    private static ArrayList<Car> inventory;
     private String dealershipName;
 
     public Dealership(String dealershipName)
@@ -42,7 +42,7 @@ public class Dealership {
         return inventory;
     }
 
-    public double getInventoryValue()
+    public static double getInventoryValue()
     {
         double total = 0;
         for(Car each : inventory){
@@ -90,7 +90,7 @@ public class Dealership {
         return electricVics;
     }
 
-    public int getNumCarsInInventory()
+    public static int getNumCarsInInventory()
     {
         int numCars = 0;
         for(Car car : inventory){

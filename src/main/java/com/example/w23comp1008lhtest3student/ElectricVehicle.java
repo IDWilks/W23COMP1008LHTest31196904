@@ -21,7 +21,7 @@ public class ElectricVehicle extends Car{
         }
     }
 
-    public String toString(Car car) {
+    public static String toString(Car car) {
         String ad = super.toString(car) + "-Electric";
         return ad;
     }

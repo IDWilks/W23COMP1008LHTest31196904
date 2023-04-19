@@ -22,8 +22,8 @@ public class CarCreator {
         cars.add(new Car("GMC","Sierra 1500",63135.75,2022));
         cars.add(new Car("Nissan","Frontier",44995.10,2022));
         cars.add(new Car("Nissan","Armada",44988,2017));
-//        cars.add(new ElectricVehicle("Audi","RS 4 E-tron",158500,2022,500));
-//        cars.add(new ElectricVehicle("Tesla","Model S Plaid",149500.99,2022,550));
+        cars.add(new ElectricVehicle("Audi","RS 4 E-tron",158500,2022,500));
+        cars.add(new ElectricVehicle("Tesla","Model S Plaid",149500.99,2022,550));
         cars.add(new Car("Lamborghini","Huracan",330000,2017));
 
         Collections.sort(cars, new Comparator<Car>() {
