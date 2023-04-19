@@ -44,7 +44,12 @@ public class Dealership {
 
     public double getInventoryValue()
     {
-        return -1;
+        double total = 0;
+        for(Car each : inventory){
+            double value = each.getPrice();
+            total += value;
+        }
+        return total;
     }
 
     public Car getLeastExpensiveCar()
