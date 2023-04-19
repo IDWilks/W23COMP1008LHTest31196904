@@ -81,7 +81,13 @@ public class Dealership {
 
     public ArrayList<Car> getElectricVehicles()
     {
-        return null;
+        ArrayList<Car> electricVics = new ArrayList<Car>();
+        for(Car car : inventory){
+            if(car.getClass() == ElectricVehicle.class){
+                electricVics.add(car);
+            }
+        }
+        return electricVics;
     }
 
     public int getNumCarsInInventory()
