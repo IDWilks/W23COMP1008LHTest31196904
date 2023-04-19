@@ -54,7 +54,16 @@ public class Dealership {
 
     public Car getLeastExpensiveCar()
     {
-        return null;
+        Car leastExpensiveCar = null;
+        if (inventory != null && !inventory.isEmpty()) {
+            leastExpensiveCar = inventory.get(0);
+            for (Car car : inventory) {
+                if (car.getPrice() < leastExpensiveCar.getPrice()) {
+                    leastExpensiveCar = car;
+                }
+            }
+        }
+        return leastExpensiveCar;
     }
     public Car getMostExpensiveCar()
     {
